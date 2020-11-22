@@ -23,4 +23,4 @@ jobs:
       - name: Trigger Docker build
         env:
           DOCKERHUB_TRIGGER: ${{ secrets.DOCKERHUB_TRIGGER }}
-        run: curl ${DOCKERHUB_TRIGGER}
+        run: curl -X POST ${DOCKERHUB_TRIGGER}
